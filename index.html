@@ -149,6 +149,27 @@
     }
     .lang-toggle button.active { background: var(--gold); color: var(--bg); }
 
+    .nav-right { display: flex; align-items: center; gap: 1rem; }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      background: var(--gold);
+      color: var(--bg);
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.18s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: var(--gold-lt); color: var(--bg); }
+
     /* ─── SECTIONS ───────────────────────────────────────────── */
     section { padding: 96px 5%; }
 
@@ -620,9 +641,16 @@
     <li><a href="#team"     data-lang-en="Team"           data-lang-es="Equipo">Team</a></li>
     <li><a href="#contact"  data-lang-en="Contact"        data-lang-es="Contacto">Contact</a></li>
   </ul>
-  <div class="lang-toggle">
-    <button id="btnEN" class="active" onclick="setLang('en')">EN</button>
-    <button id="btnES" onclick="setLang('es')">ES</button>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button id="btnEN" class="active" onclick="setLang('en')">EN</button>
+      <button id="btnES" onclick="setLang('es')">ES</button>
+    </div>
+    <a href="#contact" class="nav-cta"
+       data-lang-en="Confidential Consultation"
+       data-lang-es="Consulta Confidencial">
+      Confidential Consultation
+    </a>
   </div>
 </nav>
 
