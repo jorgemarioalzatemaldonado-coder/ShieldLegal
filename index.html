@@ -115,12 +115,15 @@
       font-weight: 700;
       color: var(--gold);
       letter-spacing: 0.05em;
+      flex-shrink: 0;
     }
 
     .nav-center {
       display: flex;
-      gap: 2rem;
+      gap: 1.5rem;
       list-style: none;
+      flex-shrink: 1;
+      overflow: hidden;
     }
 
     .nav-center a {
@@ -149,7 +152,7 @@
     }
     .lang-toggle button.active { background: var(--gold); color: var(--bg); }
 
-    .nav-right { display: flex; align-items: center; gap: 1rem; }
+    .nav-right { display: flex; align-items: center; gap: 1rem; flex-shrink: 0; }
 
     .nav-cta {
       display: inline-flex;
