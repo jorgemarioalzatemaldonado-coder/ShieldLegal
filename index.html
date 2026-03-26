@@ -417,12 +417,13 @@
     .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
 
     .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(4, auto);
-      gap: 40px;
+      display: grid !important;
+      grid-template-columns: repeat(4, 1fr) !important;
+      gap: 32px;
       margin-top: 2.5rem;
       padding-top: 1.75rem;
       border-top: 1px solid var(--gold-border);
+      width: 100%;
     }
 
     .stat-num {
@@ -784,7 +785,7 @@
       .practice-grid { grid-template-columns: 1fr; }
       .team-grid     { grid-template-columns: 1fr; }
       .form-row      { grid-template-columns: 1fr; }
-      .hero-stats    { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+      .hero-stats    { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 1.5rem; }
       .nav-cta       { display: none; }
       .mobile-cta    { display: flex; }
       body           { padding-bottom: 68px; }
