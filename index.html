@@ -253,10 +253,10 @@
     .testi-avatar {
       width: 40px; height: 40px;
       border-radius: 50%;
-      border: 1.5px solid var(--gold-border);
+      border: 2px solid #B89A5C;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.1rem;
-      background: var(--gold-dim);
+      background: #0A0C0C;
       flex-shrink: 0;
     }
 
@@ -394,7 +394,7 @@
     }
 
     .hero-title {
-      font-size: clamp(2.8rem, 6.5vw, 5.2rem);
+      font-size: clamp(2.4rem, 5.5vw, 4.4rem);
       font-weight: 300;
       line-height: 1.07;
       max-width: 860px;
@@ -417,12 +417,12 @@
     .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
 
     .hero-stats {
-      display: flex;
-      gap: 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
       margin-top: 2.5rem;
       padding-top: 1.75rem;
       border-top: 1px solid var(--gold-border);
-      flex-wrap: wrap;
     }
 
     .stat-num {
@@ -644,7 +644,8 @@
     #formMsg.ok  { display: block; background: rgba(184,154,92,0.08); border: 1px solid var(--gold-border); color: var(--gold); }
     #formMsg.err { display: block; background: rgba(200,50,50,0.08); border: 1px solid rgba(200,50,50,0.3); color: #E07070; }
 
-    .submit-btn { width: 100%; margin-top: 0.4rem; }
+    .submit-btn { width: 100%; margin-top: 0.4rem; background: #B89A5C; color: #090B0B; font-weight: 500; }
+    .submit-btn:hover { background: var(--gold-lt); color: #090B0B; }
     .submitting { opacity: 0.65; pointer-events: none; }
 
     /* ─── FOOTER ─────────────────────────────────────────────── */
@@ -899,7 +900,7 @@
     <span data-lang-en="Representation in English &amp; Spanish" data-lang-es="Representación en Inglés y Español">Representation in English &amp; Spanish</span>
   </div>
   <div class="trust-item">
-    <span style="font-size:1rem;line-height:1">&#127464;&#127476;</span>
+    <svg width="16" height="12" viewBox="0 0 16 12" style="flex-shrink:0;border-radius:1px"><rect width="16" height="6" fill="#FCD116"/><rect y="6" width="16" height="3" fill="#003893"/><rect y="9" width="16" height="3" fill="#CE1126"/></svg>
     <span data-lang-en="Licensed in Colombia" data-lang-es="Licenciados en Colombia">Licensed in Colombia</span>
   </div>
 </div>
