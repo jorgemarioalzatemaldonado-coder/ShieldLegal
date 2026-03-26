@@ -173,19 +173,129 @@
     }
     .nav-cta:hover { background: var(--gold-lt); color: var(--bg); }
 
+    /* ─── TRUST BAND ─────────────────────────────────────────── */
+    .trust-band {
+      background: var(--bg-1);
+      border-top: 1px solid var(--gold-border);
+      border-bottom: 1px solid var(--gold-border);
+      padding: 0 5%;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 1.4rem 2.5rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--muted-lt);
+      letter-spacing: 0.03em;
+      border-right: 1px solid var(--gold-border);
+      flex: 1;
+      justify-content: center;
+    }
+
+    .trust-item:last-child { border-right: none; }
+
+    .trust-item svg { color: var(--gold); flex-shrink: 0; }
+
+    /* ─── TESTIMONIALS ────────────────────────────────────────── */
+    #testimonials { background: var(--bg); }
+
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .testi-card {
+      background: var(--bg-1);
+      border: 1px solid var(--gold-border);
+      padding: 2rem;
+      position: relative;
+    }
+
+    .testi-quote {
+      font-family: var(--serif);
+      font-size: 3.5rem;
+      color: var(--gold-border);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .testi-card p {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+
+    .testi-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .testi-name {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .testi-case {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* ─── FOOTER DISCLAIMER ───────────────────────────────────── */
+    .footer-disclaimer {
+      border-top: 1px solid rgba(184,154,92,0.1);
+      margin-top: 1.5rem;
+      padding-top: 1.2rem;
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.65;
+      max-width: 700px;
+    }
+
+    /* ─── URGENCY ALERT ───────────────────────────────────────── */
+    .urgency-alert {
+      display: none;
+      background: rgba(184,154,92,0.08);
+      border: 1px solid var(--gold-border);
+      padding: 10px 14px;
+      font-size: 0.82rem;
+      color: var(--gold);
+      margin-top: 6px;
+    }
+
     /* ─── SECTIONS ───────────────────────────────────────────── */
-    section { padding: 96px 5%; }
+    section { padding: 68px 5%; }
+
+    @media (max-width: 860px) {
+      .testi-grid { grid-template-columns: 1fr; }
+      .trust-band { flex-direction: column; }
+      .trust-item { border-right: none; border-bottom: 1px solid var(--gold-border); justify-content: flex-start; }
+      .trust-item:last-child { border-bottom: none; }
+    }
 
     /* dividers */
     .rule { width: 40px; height: 1px; background: var(--gold); margin: 1.2rem 0 1.8rem; }
 
     /* ─── HERO ───────────────────────────────────────────────── */
     #hero {
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding-top: 120px;
+      padding: 130px 5% 72px;
       position: relative;
       overflow: hidden;
     }
@@ -253,9 +363,9 @@
 
     .hero-stats {
       display: flex;
-      gap: 3rem;
-      margin-top: 4rem;
-      padding-top: 2rem;
+      gap: 2.5rem;
+      margin-top: 2.5rem;
+      padding-top: 1.75rem;
       border-top: 1px solid var(--gold-border);
       flex-wrap: wrap;
     }
@@ -274,82 +384,6 @@
       margin-top: 5px;
       letter-spacing: 0.03em;
     }
-
-    /* ─── CRISIS ─────────────────────────────────────────────── */
-    #crisis { background: var(--bg-1); }
-
-    .crisis-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1px;
-      margin-top: 3rem;
-      background: var(--gold-border);
-    }
-
-    .crisis-card {
-      background: var(--bg-2);
-      padding: 2rem 1.6rem;
-      transition: background 0.18s;
-    }
-    .crisis-card:hover { background: #161B1B; }
-
-    .crisis-n {
-      font-family: var(--serif);
-      font-size: 3.2rem;
-      font-weight: 700;
-      color: rgba(184,154,92,0.18);
-      line-height: 1;
-      margin-bottom: 1rem;
-    }
-
-    .crisis-card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.55rem;
-      line-height: 1.25;
-    }
-
-    .crisis-card p {
-      font-size: 0.83rem;
-      color: var(--muted);
-      line-height: 1.65;
-    }
-
-    /* ─── WHY US ─────────────────────────────────────────────── */
-    #why-us { background: var(--bg); }
-
-    .why-head {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: end;
-      margin-bottom: 3rem;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--gold-border);
-    }
-
-    .why-card {
-      background: var(--bg-1);
-      padding: 2.25rem;
-      transition: background 0.18s;
-    }
-    .why-card:hover { background: var(--bg-2); }
-
-    .why-icon {
-      width: 42px; height: 42px;
-      display: flex; align-items: center; justify-content: center;
-      border: 1px solid var(--gold-border);
-      color: var(--gold);
-      font-size: 1.15rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .why-card h3 { font-size: 1.05rem; margin-bottom: 0.55rem; }
-    .why-card p  { font-size: 0.84rem; color: var(--muted); line-height: 1.65; }
 
     /* ─── METHOD ─────────────────────────────────────────────── */
     #method { background: var(--bg-1); }
@@ -378,25 +412,6 @@
 
     .method-col h3 { font-size: 1.35rem; color: var(--gold); margin-bottom: 0.7rem; }
     .method-col > p { font-size: 0.875rem; color: var(--muted); line-height: 1.72; }
-
-    .method-col ul {
-      list-style: none;
-      margin-top: 1.4rem;
-    }
-
-    .method-col ul li {
-      font-size: 0.82rem;
-      color: var(--muted);
-      padding: 7px 0 7px 1rem;
-      border-bottom: 1px solid rgba(184,154,92,0.08);
-      position: relative;
-    }
-
-    .method-col ul li::before {
-      content: '—';
-      position: absolute; left: 0;
-      color: var(--gold);
-    }
 
     /* ─── PRACTICE ───────────────────────────────────────────── */
     #practice { background: var(--bg); }
@@ -600,15 +615,55 @@
     .mcta-mail{ background: transparent; color: var(--gold); border: 1px solid var(--gold-border); }
     .mcta-mail:hover { background: var(--gold-dim); }
 
-    /* ─── RESPONSIVE ─────────────────────────────────────────── */
-    @media (max-width: 1024px) {
-      .crisis-grid { grid-template-columns: repeat(3, 1fr); }
+    /* ─── HAMBURGER ──────────────────────────────────────────── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px; height: 2px;
+      background: var(--gold);
+      transition: all 0.2s;
     }
 
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 68px; left: 0; right: 0;
+      background: rgba(9,11,11,0.98);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--gold-border);
+      padding: 1.5rem 5%;
+      z-index: 199;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .mobile-nav.open { display: flex; }
+
+    .mobile-nav a {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted-lt);
+      padding: 0.85rem 0;
+      border-bottom: 1px solid rgba(184,154,92,0.1);
+      transition: color 0.18s;
+    }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav a:hover { color: var(--gold); }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────── */
     @media (max-width: 860px) {
       .nav-center { display: none; }
-      .why-head   { grid-template-columns: 1fr; gap: 1.2rem; }
-      .why-grid   { grid-template-columns: repeat(2, 1fr); }
+      .hamburger  { display: flex; }
       .method-cols{ grid-template-columns: 1fr; }
       .method-col { border-right: none; border-bottom: 1px solid var(--gold-border); }
       .method-col:last-child { border-bottom: none; }
@@ -618,13 +673,12 @@
     }
 
     @media (max-width: 600px) {
-      section { padding: 68px 5%; }
-      .crisis-grid   { grid-template-columns: 1fr; }
-      .why-grid      { grid-template-columns: 1fr; }
+      section { padding: 52px 5%; }
       .practice-grid { grid-template-columns: 1fr; }
       .team-grid     { grid-template-columns: 1fr; }
       .form-row      { grid-template-columns: 1fr; }
-      .hero-stats    { gap: 1.5rem; }
+      .hero-stats    { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+      .nav-cta       { display: none; }
       .mobile-cta    { display: flex; }
       body           { padding-bottom: 68px; }
       .footer-inner  { flex-direction: column; align-items: flex-start; }
@@ -637,12 +691,11 @@
 <nav>
   <div class="nav-logo">ShieldLegal</div>
   <ul class="nav-center">
-    <li><a href="#crisis"   data-lang-en="The Crisis"     data-lang-es="La Crisis">The Crisis</a></li>
-    <li><a href="#why-us"   data-lang-en="Why Us"         data-lang-es="Por Qué Nosotros">Why Us</a></li>
     <li><a href="#method"   data-lang-en="Method"         data-lang-es="Método">Method</a></li>
     <li><a href="#practice" data-lang-en="Practice Areas" data-lang-es="Áreas de Práctica">Practice Areas</a></li>
-    <li><a href="#team"     data-lang-en="Team"           data-lang-es="Equipo">Team</a></li>
-    <li><a href="#contact"  data-lang-en="Contact"        data-lang-es="Contacto">Contact</a></li>
+    <li><a href="#team"         data-lang-en="Team"        data-lang-es="Equipo">Team</a></li>
+    <li><a href="#testimonials" data-lang-en="Results"    data-lang-es="Resultados">Results</a></li>
+    <li><a href="#contact"      data-lang-en="Contact"    data-lang-es="Contacto">Contact</a></li>
   </ul>
   <div class="nav-right">
     <div class="lang-toggle">
@@ -654,8 +707,20 @@
        data-lang-es="Consulta Confidencial">
       Confidential Consultation
     </a>
+    <button class="hamburger" id="hamburgerBtn" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- ═══ MOBILE NAV DRAWER ══════════════════════════════════════ -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#method"   onclick="closeMobileNav()" data-lang-en="Method"         data-lang-es="Método">Method</a>
+  <a href="#practice" onclick="closeMobileNav()" data-lang-en="Practice Areas" data-lang-es="Áreas de Práctica">Practice Areas</a>
+  <a href="#team"     onclick="closeMobileNav()" data-lang-en="Team"           data-lang-es="Equipo">Team</a>
+  <a href="#testimonials" onclick="closeMobileNav()" data-lang-en="Results"    data-lang-es="Resultados">Results</a>
+  <a href="#contact"  onclick="closeMobileNav()" data-lang-en="Contact"        data-lang-es="Contacto">Contact</a>
+</div>
 
 <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
 <section id="hero">
@@ -668,9 +733,9 @@
     When the stakes are highest,<br><em>your defense must be flawless.</em>
   </h1>
   <p class="hero-sub"
-     data-lang-en="ShieldLegal provides strategic, high-stakes immigration representation for individuals and families facing complex legal challenges across jurisdictions."
-     data-lang-es="ShieldLegal ofrece representación migratoria estratégica en casos de alto riesgo para personas y familias que enfrentan desafíos legales complejos en distintas jurisdicciones.">
-    ShieldLegal provides strategic, high-stakes immigration representation for individuals and families facing complex legal challenges across jurisdictions.
+     data-lang-en="If you are facing deportation, detention, a visa denial, or an immigration deadline — you need counsel that has won these cases before. We have."
+     data-lang-es="Si enfrentas deportación, detención, una negativa de visa o un plazo migratorio crítico — necesitas a alguien que ya haya ganado estos casos. Nosotros lo hemos hecho.">
+    If you are facing deportation, detention, a visa denial, or an immigration deadline — you need counsel that has won these cases before. We have.
   </p>
   <div class="hero-cta">
     <a href="#contact" class="btn btn-gold"
@@ -704,131 +769,22 @@
   </div>
 </section>
 
-<!-- ═══ CRISIS ════════════════════════════════════════════════════ -->
-<section id="crisis">
-  <span class="label" data-lang-en="The Stakes" data-lang-es="Lo Que Está en Juego">The Stakes</span>
-  <h2 class="section-title"
-      data-lang-en="Five risks that can end your future in a country"
-      data-lang-es="Cinco riesgos que pueden acabar con tu futuro en un país">
-    Five risks that can end your future in a country
-  </h2>
-  <p class="section-sub"
-     data-lang-en="Without proper legal defense, any of these scenarios can lead to permanent exclusion, criminal charges, or family separation."
-     data-lang-es="Sin una defensa legal adecuada, cualquiera de estos escenarios puede derivar en exclusión permanente, cargos penales o separación familiar.">
-    Without proper legal defense, any of these scenarios can lead to permanent exclusion, criminal charges, or family separation.
-  </p>
-  <div class="crisis-grid">
-    <div class="crisis-card">
-      <div class="crisis-n">01</div>
-      <h3 data-lang-en="Deportation Orders" data-lang-es="Órdenes de Deportación">Deportation Orders</h3>
-      <p data-lang-en="A removal order issued without proper legal representation leaves you with limited appeal windows and devastating long-term consequences."
-         data-lang-es="Una orden de expulsión sin representación legal adecuada te deja con ventanas de apelación limitadas y consecuencias devastadoras a largo plazo.">
-        A removal order issued without proper legal representation leaves you with limited appeal windows and devastating long-term consequences.
-      </p>
-    </div>
-    <div class="crisis-card">
-      <div class="crisis-n">02</div>
-      <h3 data-lang-en="Visa Denials &amp; Bans" data-lang-es="Negaciones de Visa y Prohibiciones">Visa Denials &amp; Bans</h3>
-      <p data-lang-en="An unresolved denial can trigger multi-year or permanent entry bans, cutting off business, family, and asylum pathways permanently."
-         data-lang-es="Una negativa no resuelta puede activar prohibiciones de entrada de varios años o permanentes, cerrando vías laborales, familiares y de asilo.">
-        An unresolved denial can trigger multi-year or permanent entry bans, cutting off business, family, and asylum pathways permanently.
-      </p>
-    </div>
-    <div class="crisis-card">
-      <div class="crisis-n">03</div>
-      <h3 data-lang-en="Detention Without Counsel" data-lang-es="Detención Sin Asesoría Legal">Detention Without Counsel</h3>
-      <p data-lang-en="Immigration detention without qualified counsel can accelerate removal proceedings and eliminate your right to due process protections."
-         data-lang-es="La detención migratoria sin asesoría legal calificada puede acelerar los procesos de expulsión y eliminar tu derecho al debido proceso.">
-        Immigration detention without qualified counsel can accelerate removal proceedings and eliminate your right to due process protections.
-      </p>
-    </div>
-    <div class="crisis-card">
-      <div class="crisis-n">04</div>
-      <h3 data-lang-en="Criminal-Immigration Crossover" data-lang-es="Intersección Penal-Migratoria">Criminal-Immigration Crossover</h3>
-      <p data-lang-en="Even minor criminal convictions can trigger mandatory removal grounds. This intersection requires specialized dual expertise."
-         data-lang-es="Incluso condenas penales menores pueden activar causales de expulsión obligatorias. Esta intersección requiere experiencia dual especializada.">
-        Even minor criminal convictions can trigger mandatory removal grounds. This intersection requires specialized dual expertise.
-      </p>
-    </div>
-    <div class="crisis-card">
-      <div class="crisis-n">05</div>
-      <h3 data-lang-en="Family Separation Risk" data-lang-es="Riesgo de Separación Familiar">Family Separation Risk</h3>
-      <p data-lang-en="Enforcement actions targeting one family member can fracture an entire household. Coordinated legal strategy protects the whole family unit."
-         data-lang-es="Las acciones contra un miembro de la familia pueden fragmentar todo un hogar. Una estrategia legal coordinada protege a toda la unidad familiar.">
-        Enforcement actions targeting one family member can fracture an entire household. Coordinated legal strategy protects the whole family unit.
-      </p>
-    </div>
+<!-- ═══ TRUST BAND ═══════════════════════════════════════════════ -->
+<div class="trust-band">
+  <div class="trust-item">
+    <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    <span data-lang-en="Attorney-Client Privilege from First Contact" data-lang-es="Privilegio Abogado-Cliente desde el Primer Contacto">Attorney-Client Privilege from First Contact</span>
   </div>
-</section>
+  <div class="trust-item">
+    <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    <span data-lang-en="Emergency Response Within 1 Hour" data-lang-es="Respuesta de Emergencia en Menos de 1 Hora">Emergency Response Within 1 Hour</span>
+  </div>
+  <div class="trust-item">
+    <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+    <span data-lang-en="Representation in English &amp; Spanish" data-lang-es="Representación en Inglés y Español">Representation in English &amp; Spanish</span>
+  </div>
+</div>
 
-<!-- ═══ WHY US ════════════════════════════════════════════════════ -->
-<section id="why-us">
-  <div class="why-head">
-    <div>
-      <span class="label" data-lang-en="Why ShieldLegal" data-lang-es="Por Qué ShieldLegal">Why ShieldLegal</span>
-      <h2 class="section-title"
-          data-lang-en="Six pillars that set us apart"
-          data-lang-es="Seis pilares que nos diferencian">
-        Six pillars that set us apart
-      </h2>
-    </div>
-    <p class="section-sub"
-       data-lang-en="We operate at the intersection of elite legal strategy, cultural fluency, and relentless client advocacy."
-       data-lang-es="Operamos en la intersección de estrategia legal de élite, fluidez cultural y defensa incansable del cliente.">
-      We operate at the intersection of elite legal strategy, cultural fluency, and relentless client advocacy.
-    </p>
-  </div>
-  <div class="why-grid">
-    <div class="why-card">
-      <div class="why-icon">⚖</div>
-      <h3 data-lang-en="Strategic Litigation"        data-lang-es="Litigación Estratégica">Strategic Litigation</h3>
-      <p  data-lang-en="We don't file paperwork — we build cases. Every action is part of a deliberate legal strategy designed for your circumstances."
-          data-lang-es="No presentamos papeles — construimos casos. Cada acción es parte de una estrategia legal deliberada diseñada para tu situación.">
-        We don't file paperwork — we build cases. Every action is part of a deliberate legal strategy designed for your circumstances.
-      </p>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">🔒</div>
-      <h3 data-lang-en="Absolute Confidentiality"    data-lang-es="Confidencialidad Absoluta">Absolute Confidentiality</h3>
-      <p  data-lang-en="Your case details never leave our encrypted systems. We apply banking-grade privacy protocols to every client file."
-          data-lang-es="Los detalles de tu caso nunca salen de nuestros sistemas cifrados. Aplicamos protocolos de privacidad de nivel bancario.">
-        Your case details never leave our encrypted systems. We apply banking-grade privacy protocols to every client file.
-      </p>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">🌐</div>
-      <h3 data-lang-en="Bilingual &amp; Bicultural"  data-lang-es="Bilingüe y Bicultural">Bilingual &amp; Bicultural</h3>
-      <p  data-lang-en="Full legal representation in English and Spanish, with deep cultural understanding of the realities our clients navigate daily."
-          data-lang-es="Representación legal completa en inglés y español, con profunda comprensión cultural de las realidades que nuestros clientes enfrentan.">
-        Full legal representation in English and Spanish, with deep cultural understanding of the realities our clients navigate daily.
-      </p>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">⚡</div>
-      <h3 data-lang-en="24-Hour Emergency Response"  data-lang-es="Respuesta de Emergencia 24 Horas">24-Hour Emergency Response</h3>
-      <p  data-lang-en="Immigration crises don't follow business hours. Our emergency line connects you to counsel within one hour of contact."
-          data-lang-es="Las crisis migratorias no respetan horarios de oficina. Nuestra línea de emergencia te conecta con un abogado en menos de una hora.">
-        Immigration crises don't follow business hours. Our emergency line connects you to counsel within one hour of contact.
-      </p>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">📋</div>
-      <h3 data-lang-en="End-to-End Case Management"  data-lang-es="Gestión Integral del Caso">End-to-End Case Management</h3>
-      <p  data-lang-en="From intake to resolution, you have a dedicated attorney and case manager. No handoffs, no gaps, no missed deadlines."
-          data-lang-es="Desde la solicitud hasta la resolución, cuentas con abogado y gestor dedicados. Sin transferencias, sin vacíos, sin plazos perdidos.">
-        From intake to resolution, you have a dedicated attorney and case manager. No handoffs, no gaps, no missed deadlines.
-      </p>
-    </div>
-    <div class="why-card">
-      <div class="why-icon">🎯</div>
-      <h3 data-lang-en="High-Stakes Specialization"  data-lang-es="Especialización en Alto Riesgo">High-Stakes Specialization</h3>
-      <p  data-lang-en="We intentionally limit our caseload to give every client the attention their case demands. We don't do volume — we do results."
-          data-lang-es="Limitamos intencionalmente nuestra cartera de casos para dar a cada cliente la atención que exige su caso. No hacemos volumen — hacemos resultados.">
-        We intentionally limit our caseload to give every client the attention their case demands. We don't do volume — we do results.
-      </p>
-    </div>
-  </div>
-</section>
 
 <!-- ═══ METHOD ════════════════════════════════════════════════════ -->
 <section id="method">
@@ -847,44 +803,26 @@
     <div class="method-col">
       <div class="method-num">I</div>
       <h3 data-lang-en="Assess &amp; Diagnose"  data-lang-es="Evaluar y Diagnosticar">Assess &amp; Diagnose</h3>
-      <p  data-lang-en="We conduct an exhaustive legal risk assessment before recommending any action. No surprises, no shortcuts."
-          data-lang-es="Realizamos una evaluación exhaustiva del riesgo legal antes de recomendar cualquier acción. Sin sorpresas, sin atajos.">
-        We conduct an exhaustive legal risk assessment before recommending any action. No surprises, no shortcuts.
+      <p  data-lang-en="Exhaustive legal risk assessment — immigration history, criminal intersection, deadlines — before recommending any action."
+          data-lang-es="Evaluación exhaustiva del riesgo legal — historial migratorio, antecedentes penales, plazos — antes de recomendar cualquier acción.">
+        Exhaustive legal risk assessment — immigration history, criminal intersection, deadlines — before recommending any action.
       </p>
-      <ul>
-        <li data-lang-en="Full immigration history review"         data-lang-es="Revisión completa del historial migratorio">Full immigration history review</li>
-        <li data-lang-en="Criminal record intersection analysis"   data-lang-es="Análisis de intersección con antecedentes penales">Criminal record intersection analysis</li>
-        <li data-lang-en="Deadline &amp; vulnerability mapping"   data-lang-es="Mapeo de plazos y vulnerabilidades">Deadline &amp; vulnerability mapping</li>
-        <li data-lang-en="Multi-country exposure assessment"       data-lang-es="Evaluación de exposición en múltiples países">Multi-country exposure assessment</li>
-      </ul>
     </div>
     <div class="method-col">
       <div class="method-num">II</div>
       <h3 data-lang-en="Strategize &amp; Build" data-lang-es="Estrategizar y Construir">Strategize &amp; Build</h3>
-      <p  data-lang-en="We design a layered legal strategy with primary, secondary, and contingency paths — built for the worst-case scenario."
-          data-lang-es="Diseñamos una estrategia legal en capas con rutas primaria, secundaria y de contingencia — construida para el peor escenario.">
-        We design a layered legal strategy with primary, secondary, and contingency paths — built for the worst-case scenario.
+      <p  data-lang-en="Layered defense architecture with primary, secondary, and contingency paths — built for the worst-case scenario."
+          data-lang-es="Arquitectura de defensa en capas con rutas primaria, secundaria y de contingencia — construida para el peor escenario.">
+        Layered defense architecture with primary, secondary, and contingency paths — built for the worst-case scenario.
       </p>
-      <ul>
-        <li data-lang-en="Custom defense architecture"       data-lang-es="Arquitectura de defensa personalizada">Custom defense architecture</li>
-        <li data-lang-en="Evidence package construction"     data-lang-es="Construcción del paquete de evidencia">Evidence package construction</li>
-        <li data-lang-en="Expert witness coordination"       data-lang-es="Coordinación de testigos expertos">Expert witness coordination</li>
-        <li data-lang-en="Agency-level liaison strategy"     data-lang-es="Estrategia de enlace a nivel de agencias">Agency-level liaison strategy</li>
-      </ul>
     </div>
     <div class="method-col">
       <div class="method-num">III</div>
       <h3 data-lang-en="Execute &amp; Protect"  data-lang-es="Ejecutar y Proteger">Execute &amp; Protect</h3>
-      <p  data-lang-en="We represent you at every stage — hearings, appeals, consular proceedings — and secure your position against future vulnerabilities."
-          data-lang-es="Te representamos en cada etapa — audiencias, apelaciones, trámites consulares — y aseguramos tu posición frente a vulnerabilidades futuras.">
-        We represent you at every stage — hearings, appeals, consular proceedings — and secure your position against future vulnerabilities.
+      <p  data-lang-en="Full representation at hearings, appeals, and consular proceedings — then securing your status against future vulnerabilities."
+          data-lang-es="Representación completa en audiencias, apelaciones y trámites consulares — y aseguramiento de tu estatus frente a vulnerabilidades futuras.">
+        Full representation at hearings, appeals, and consular proceedings — then securing your status against future vulnerabilities.
       </p>
-      <ul>
-        <li data-lang-en="Court &amp; tribunal representation"  data-lang-es="Representación ante juzgados y tribunales">Court &amp; tribunal representation</li>
-        <li data-lang-en="Appellate review &amp; filing"        data-lang-es="Revisión y presentación de apelaciones">Appellate review &amp; filing</li>
-        <li data-lang-en="Post-resolution status securing"      data-lang-es="Aseguramiento del estatus tras la resolución">Post-resolution status securing</li>
-        <li data-lang-en="Long-term compliance planning"        data-lang-es="Planificación de cumplimiento a largo plazo">Long-term compliance planning</li>
-      </ul>
     </div>
   </div>
 </section>
@@ -1011,6 +949,51 @@
   </div>
 </section>
 
+<!-- ═══ TESTIMONIALS ═════════════════════════════════════════════ -->
+<section id="testimonials">
+  <span class="label" data-lang-en="Client Results" data-lang-es="Resultados de Clientes">Client Results</span>
+  <h2 class="section-title"
+      data-lang-en="From clients who faced what you are facing"
+      data-lang-es="De clientes que enfrentaron lo que tú enfrentas">
+    From clients who faced what you are facing
+  </h2>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p data-lang-en="After two failed appeals with other firms, ShieldLegal got my removal case reversed in federal court. I didn't think it was possible."
+         data-lang-es="Después de dos apelaciones fallidas con otros despachos, ShieldLegal logró revertir mi caso de expulsión en un tribunal federal. No creía que fuera posible.">
+        After two failed appeals with other firms, ShieldLegal got my removal case reversed in federal court. I didn't think it was possible.
+      </p>
+      <div class="testi-meta">
+        <span class="testi-name" data-lang-en="A.M. — Venezuelan national" data-lang-es="A.M. — Nacional venezolano">A.M. — Venezuelan national</span>
+        <span class="testi-case" data-lang-en="Removal Defense &amp; Federal Appeal" data-lang-es="Defensa contra Expulsión y Apelación Federal">Removal Defense &amp; Federal Appeal</span>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p data-lang-en="I was detained and given 48 hours. ShieldLegal had an attorney at the facility within hours and stopped the deportation flight. I'm still here with my family."
+         data-lang-es="Estaba detenido y me dieron 48 horas. ShieldLegal tuvo un abogado en el centro de detención en pocas horas y detuvo el vuelo de deportación. Sigo aquí con mi familia.">
+        I was detained and given 48 hours. ShieldLegal had an attorney at the facility within hours and stopped the deportation flight. I'm still here with my family.
+      </p>
+      <div class="testi-meta">
+        <span class="testi-name" data-lang-en="R.T. — Colombian national" data-lang-es="R.T. — Nacional colombiano">R.T. — Colombian national</span>
+        <span class="testi-case" data-lang-en="Emergency Detention Defense" data-lang-es="Defensa de Emergencia por Detención">Emergency Detention Defense</span>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-quote">"</div>
+      <p data-lang-en="Our EB-1A had been denied twice. ShieldLegal rebuilt the entire evidentiary package and we were approved in four months. The expertise is in a different league."
+         data-lang-es="Nuestra EB-1A había sido negada dos veces. ShieldLegal reconstruyó todo el paquete probatorio y fuimos aprobados en cuatro meses. La experiencia está en otra categoría.">
+        Our EB-1A had been denied twice. ShieldLegal rebuilt the entire evidentiary package and we were approved in four months. The expertise is in a different league.
+      </p>
+      <div class="testi-meta">
+        <span class="testi-name" data-lang-en="K.L. — South Korean national" data-lang-es="K.L. — Nacional surcoreana">K.L. — South Korean national</span>
+        <span class="testi-case" data-lang-en="EB-1A Extraordinary Ability" data-lang-es="EB-1A Habilidad Extraordinaria">EB-1A Extraordinary Ability</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ CONTACT ═══════════════════════════════════════════════════ -->
 <section id="contact">
   <span class="label" data-lang-en="Confidential Intake" data-lang-es="Solicitud Confidencial">Confidential Intake</span>
@@ -1043,6 +1026,39 @@
 
     <!-- Form -->
     <form id="leadForm" novalidate>
+      <div class="f-group">
+        <label for="urgency_level" data-lang-en="Urgency Level" data-lang-es="Nivel de Urgencia">Urgency Level</label>
+        <select id="urgency_level" name="urgency_level" required onchange="handleUrgency(this.value)">
+          <option value="" disabled selected
+            data-lang-en="Select urgency level"
+            data-lang-es="Selecciona el nivel de urgencia">Select urgency level</option>
+          <option value="emergency"
+            data-lang-en="Emergency — Court date within 30 days / Detained"
+            data-lang-es="Emergencia — Audiencia en menos de 30 días / Detenido">
+            Emergency — Court date within 30 days / Detained
+          </option>
+          <option value="high"
+            data-lang-en="High — Deadline within 90 days"
+            data-lang-es="Alto — Plazo en menos de 90 días">
+            High — Deadline within 90 days
+          </option>
+          <option value="medium"
+            data-lang-en="Medium — Planning ahead (3–6 months)"
+            data-lang-es="Medio — Planificación anticipada (3–6 meses)">
+            Medium — Planning ahead (3–6 months)
+          </option>
+          <option value="low"
+            data-lang-en="Low — Exploratory consultation"
+            data-lang-es="Bajo — Consulta exploratoria">
+            Low — Exploratory consultation
+          </option>
+        </select>
+        <div class="urgency-alert" id="urgencyAlert"
+             data-lang-en="⚡ Emergency case detected — we will contact you within 1 hour of receiving your form."
+             data-lang-es="⚡ Caso de emergencia detectado — nos pondremos en contacto contigo en menos de 1 hora de recibir tu solicitud.">
+          ⚡ Emergency case detected — we will contact you within 1 hour of receiving your form.
+        </div>
+      </div>
       <div class="form-row">
         <div class="f-group">
           <label for="full_name" data-lang-en="Full Name"       data-lang-es="Nombre Completo">Full Name</label>
@@ -1070,34 +1086,6 @@
                  data-ph-en="e.g. Colombian"    data-ph-es="ej. Colombiano"
                  placeholder="e.g. Colombian" />
         </div>
-      </div>
-      <div class="f-group">
-        <label for="urgency_level" data-lang-en="Urgency Level" data-lang-es="Nivel de Urgencia">Urgency Level</label>
-        <select id="urgency_level" name="urgency_level" required>
-          <option value="" disabled selected
-            data-lang-en="Select urgency level"
-            data-lang-es="Selecciona el nivel de urgencia">Select urgency level</option>
-          <option value="emergency"
-            data-lang-en="Emergency — Court date within 30 days / Detained"
-            data-lang-es="Emergencia — Audiencia en menos de 30 días / Detenido">
-            Emergency — Court date within 30 days / Detained
-          </option>
-          <option value="high"
-            data-lang-en="High — Deadline within 90 days"
-            data-lang-es="Alto — Plazo en menos de 90 días">
-            High — Deadline within 90 days
-          </option>
-          <option value="medium"
-            data-lang-en="Medium — Planning ahead (3–6 months)"
-            data-lang-es="Medio — Planificación anticipada (3–6 meses)">
-            Medium — Planning ahead (3–6 months)
-          </option>
-          <option value="low"
-            data-lang-en="Low — Exploratory consultation"
-            data-lang-es="Bajo — Consulta exploratoria">
-            Low — Exploratory consultation
-          </option>
-        </select>
       </div>
       <div class="f-group">
         <label for="case_description" data-lang-en="Brief Case Description" data-lang-es="Descripción Breve del Caso">Brief Case Description</label>
@@ -1133,6 +1121,11 @@
       <a href="mailto:intake@shieldlegal.co">intake@shieldlegal.co</a>
     </div>
   </div>
+  <p class="footer-disclaimer"
+     data-lang-en="The information on this website does not constitute legal advice and does not create an attorney-client relationship. Every case is unique. Past results do not guarantee future outcomes. Contact us to discuss the specifics of your situation."
+     data-lang-es="La información en este sitio web no constituye asesoría legal y no crea una relación abogado-cliente. Cada caso es único. Los resultados anteriores no garantizan resultados futuros. Contáctenos para analizar los detalles de su situación.">
+    The information on this website does not constitute legal advice and does not create an attorney-client relationship. Every case is unique. Past results do not guarantee future outcomes. Contact us to discuss the specifics of your situation.
+  </p>
 </footer>
 
 <!-- ═══ MOBILE CTA BAR ════════════════════════════════════════════ -->
@@ -1193,6 +1186,25 @@
   // Init
   window._successMsg = 'Thank you. Your intake has been received. We will contact you within 24 hours.';
   window._errorMsg   = 'Something went wrong. Please email intake@shieldlegal.co directly.';
+
+  /* ── HAMBURGER ───────────────────────────────────────────── */
+  function toggleMobileNav() {
+    const nav = document.getElementById('mobileNav');
+    nav.classList.toggle('open');
+  }
+  function closeMobileNav() {
+    document.getElementById('mobileNav').classList.remove('open');
+  }
+
+  /* ── URGENCY ALERT ───────────────────────────────────────── */
+  function handleUrgency(val) {
+    const alert = document.getElementById('urgencyAlert');
+    if (val === 'emergency') {
+      alert.style.display = 'block';
+    } else {
+      alert.style.display = 'none';
+    }
+  }
 
   /* ── SUPABASE FORM ───────────────────────────────────────── */
   const SB_URL = 'https://onflvrtnrgflhaijummw.supabase.co';
