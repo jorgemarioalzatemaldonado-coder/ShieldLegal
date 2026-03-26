@@ -483,13 +483,17 @@
     }
 
     .avatar {
-      width: 68px; height: 68px;
+      width: 80px; height: 80px;
       border-radius: 50%;
-      background: var(--gold-dim);
       border: 2px solid var(--gold-border);
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--serif); font-size: 1.45rem;
-      color: var(--gold); margin-bottom: 1.2rem;
+      margin-bottom: 1.2rem;
+      overflow: hidden;
+    }
+
+    .avatar img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .team-card h3 { font-size: 1.2rem; margin-bottom: 0.2rem; }
@@ -948,11 +952,11 @@
   </p>
   <div class="team-grid">
     <div class="team-card">
-      <div class="avatar">MV</div>
-      <h3>Marcela Vargas</h3>
-      <div class="team-role" data-lang-en="Managing Partner" data-lang-es="Socia Directora">Managing Partner</div>
+      <div class="avatar"><img src="attorney.png" alt="Alejandro Mendoza" /></div>
+      <h3>Alejandro Mendoza</h3>
+      <div class="team-role" data-lang-en="Senior Criminal Defense" data-lang-es="Defensa Penal Senior">Senior Criminal Defense</div>
       <p data-lang-en="Former federal public defender with 18 years of immigration and criminal defense experience across U.S. circuit courts."
-         data-lang-es="Ex defensora pública federal con 18 años de experiencia en defensa migratoria y penal ante tribunales de circuito en EE. UU.">
+         data-lang-es="Ex defensor público federal con 18 años de experiencia en defensa migratoria y penal ante tribunales de circuito en EE. UU.">
         Former federal public defender with 18 years of immigration and criminal defense experience across U.S. circuit courts.
       </p>
       <div class="team-divider"></div>
@@ -963,33 +967,33 @@
       </div>
     </div>
     <div class="team-card">
-      <div class="avatar">JR</div>
-      <h3>James Rourke</h3>
-      <div class="team-role" data-lang-en="Senior Associate" data-lang-es="Asociado Senior">Senior Associate</div>
-      <p data-lang-en="Specialist in business immigration and investor visas with a decade of experience advising high-net-worth clients and multinationals."
-         data-lang-es="Especialista en inmigración empresarial y visas de inversión con una década asesorando a clientes de alto patrimonio y multinacionales.">
-        Specialist in business immigration and investor visas with a decade of experience advising high-net-worth clients and multinationals.
+      <div class="avatar"><img src="psychologist.png" alt="Carolina Restrepo" /></div>
+      <h3>Carolina Restrepo</h3>
+      <div class="team-role" data-lang-en="Forensic Psychology" data-lang-es="Psicología Forense">Forensic Psychology</div>
+      <p data-lang-en="Specialist in forensic psychological evaluations for immigration cases, trauma assessments, and expert witness testimony."
+         data-lang-es="Especialista en evaluaciones psicológicas forenses para casos migratorios, valoraciones de trauma y testimonio como perito experto.">
+        Specialist in forensic psychological evaluations for immigration cases, trauma assessments, and expert witness testimony.
       </p>
       <div class="team-divider"></div>
       <div class="tags">
-        <span class="tag">EB-1 / EB-2</span>
-        <span class="tag" data-lang-en="E-2 Investor" data-lang-es="E-2 Inversionista">E-2 Investor</span>
-        <span class="tag">L-1 / O-1</span>
+        <span class="tag" data-lang-en="Trauma Assessment" data-lang-es="Evaluación de Trauma">Trauma Assessment</span>
+        <span class="tag" data-lang-en="Expert Witness" data-lang-es="Perito Experto">Expert Witness</span>
+        <span class="tag" data-lang-en="Asylum Support" data-lang-es="Apoyo en Asilo">Asylum Support</span>
       </div>
     </div>
     <div class="team-card">
-      <div class="avatar">SC</div>
-      <h3>Sofía Castellanos</h3>
-      <div class="team-role" data-lang-en="Humanitarian Law Counsel" data-lang-es="Asesora en Derecho Humanitario">Humanitarian Law Counsel</div>
-      <p data-lang-en="Expert in asylum, CAT claims, and human rights law. Fluent in Spanish, English, and French with UNHCR field experience."
-         data-lang-es="Experta en asilo, reclamaciones CAT y derecho internacional de los derechos humanos. Fluida en español, inglés y francés con experiencia de campo en ACNUR.">
-        Expert in asylum, CAT claims, and human rights law. Fluent in Spanish, English, and French with UNHCR field experience.
+      <div class="avatar"><img src="investigator.png" alt="Ricardo Salcedo" /></div>
+      <h3>Ricardo Salcedo</h3>
+      <div class="team-role" data-lang-en="Forensic Investigation" data-lang-es="Investigación Forense">Forensic Investigation</div>
+      <p data-lang-en="Expert in forensic investigation, evidence analysis, and country condition research for complex immigration and asylum cases."
+         data-lang-es="Experto en investigación forense, análisis de evidencia e investigación de condiciones de país para casos migratorios y de asilo complejos.">
+        Expert in forensic investigation, evidence analysis, and country condition research for complex immigration and asylum cases.
       </p>
       <div class="team-divider"></div>
       <div class="tags">
-        <span class="tag" data-lang-en="Asylum &amp; CAT"  data-lang-es="Asilo y CAT">Asylum &amp; CAT</span>
-        <span class="tag" data-lang-en="Human Rights"      data-lang-es="Derechos Humanos">Human Rights</span>
-        <span class="tag">SIJS</span>
+        <span class="tag" data-lang-en="Evidence Analysis" data-lang-es="Análisis de Evidencia">Evidence Analysis</span>
+        <span class="tag" data-lang-en="Country Conditions" data-lang-es="Condiciones de País">Country Conditions</span>
+        <span class="tag" data-lang-en="Case Research" data-lang-es="Investigación de Casos">Case Research</span>
       </div>
     </div>
   </div>
