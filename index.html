@@ -292,19 +292,39 @@
 
     /* ─── HERO ───────────────────────────────────────────────── */
     #hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 130px 5% 72px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      min-height: 100vh;
       position: relative;
       overflow: hidden;
     }
 
-    #hero::before {
+    .hero-content {
+      padding: 130px 5% 72px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-image {
+      position: relative;
+      align-self: stretch;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .hero-image::before {
       content: '';
-      position: absolute; top: -20%; right: -10%;
-      width: 800px; height: 800px;
-      background: radial-gradient(circle, rgba(184,154,92,0.055) 0%, transparent 68%);
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, var(--bg) 0%, transparent 55%);
+      z-index: 1;
       pointer-events: none;
     }
 
@@ -664,6 +684,26 @@
     @media (max-width: 860px) {
       .nav-center { display: none; }
       .hamburger  { display: flex; }
+      #hero {
+        grid-template-columns: 1fr;
+        background-image: url('lawyer.png');
+        background-size: cover;
+        background-position: center top;
+      }
+      #hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(9,11,11,0.72);
+        z-index: 0;
+        pointer-events: none;
+      }
+      .hero-image { display: none; }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        padding: 110px 5% 60px;
+      }
       .method-cols{ grid-template-columns: 1fr; }
       .method-col { border-right: none; border-bottom: 1px solid var(--gold-border); }
       .method-col:last-child { border-bottom: none; }
@@ -674,6 +714,7 @@
 
     @media (max-width: 600px) {
       section { padding: 52px 5%; }
+      .hero-content { padding: 100px 5% 52px; }
       .practice-grid { grid-template-columns: 1fr; }
       .team-grid     { grid-template-columns: 1fr; }
       .form-row      { grid-template-columns: 1fr; }
@@ -724,48 +765,53 @@
 
 <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
 <section id="hero">
-  <div class="badge-24" data-lang-en="24/7 Emergency Legal Response" data-lang-es="Respuesta Legal de Emergencia 24/7">
-    24/7 Emergency Legal Response
+  <div class="hero-content">
+    <div class="badge-24" data-lang-en="24/7 Emergency Legal Response" data-lang-es="Respuesta Legal de Emergencia 24/7">
+      24/7 Emergency Legal Response
+    </div>
+    <h1 class="hero-title"
+        data-lang-en="When the stakes are highest,<br><em>your defense must be flawless.</em>"
+        data-lang-es="Cuando el riesgo es máximo,<br><em>tu defensa debe ser impecable.</em>">
+      When the stakes are highest,<br><em>your defense must be flawless.</em>
+    </h1>
+    <p class="hero-sub"
+       data-lang-en="If you are facing deportation, detention, a visa denial, or an immigration deadline — you need counsel that has won these cases before. We have."
+       data-lang-es="Si enfrentas deportación, detención, una negativa de visa o un plazo migratorio crítico — necesitas a alguien que ya haya ganado estos casos. Nosotros lo hemos hecho.">
+      If you are facing deportation, detention, a visa denial, or an immigration deadline — you need counsel that has won these cases before. We have.
+    </p>
+    <div class="hero-cta">
+      <a href="#contact" class="btn btn-gold"
+         data-lang-en="Request a Confidential Consultation"
+         data-lang-es="Solicitar Consulta Confidencial">
+        Request a Confidential Consultation
+      </a>
+      <a href="#method" class="btn btn-outline"
+         data-lang-en="Our Method"
+         data-lang-es="Nuestro Método">
+        Our Method
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">98%</div>
+        <div class="stat-lbl" data-lang-en="Case Success Rate" data-lang-es="Tasa de Éxito en Casos">Case Success Rate</div>
+      </div>
+      <div>
+        <div class="stat-num">40+</div>
+        <div class="stat-lbl" data-lang-en="Nationalities Served" data-lang-es="Nacionalidades Atendidas">Nationalities Served</div>
+      </div>
+      <div>
+        <div class="stat-num">15+</div>
+        <div class="stat-lbl" data-lang-en="Years Combined Experience" data-lang-es="Años de Experiencia Combinada">Years Combined Experience</div>
+      </div>
+      <div>
+        <div class="stat-num">1h</div>
+        <div class="stat-lbl" data-lang-en="Emergency Response Time" data-lang-es="Tiempo de Respuesta de Emergencia">Emergency Response Time</div>
+      </div>
+    </div>
   </div>
-  <h1 class="hero-title"
-      data-lang-en="When the stakes are highest,<br><em>your defense must be flawless.</em>"
-      data-lang-es="Cuando el riesgo es máximo,<br><em>tu defensa debe ser impecable.</em>">
-    When the stakes are highest,<br><em>your defense must be flawless.</em>
-  </h1>
-  <p class="hero-sub"
-     data-lang-en="If you are facing deportation, detention, a visa denial, or an immigration deadline — you need counsel that has won these cases before. We have."
-     data-lang-es="Si enfrentas deportación, detención, una negativa de visa o un plazo migratorio crítico — necesitas a alguien que ya haya ganado estos casos. Nosotros lo hemos hecho.">
-    If you are facing deportation, detention, a visa denial, or an immigration deadline — you need counsel that has won these cases before. We have.
-  </p>
-  <div class="hero-cta">
-    <a href="#contact" class="btn btn-gold"
-       data-lang-en="Request a Confidential Consultation"
-       data-lang-es="Solicitar Consulta Confidencial">
-      Request a Confidential Consultation
-    </a>
-    <a href="#method" class="btn btn-outline"
-       data-lang-en="Our Method"
-       data-lang-es="Nuestro Método">
-      Our Method
-    </a>
-  </div>
-  <div class="hero-stats">
-    <div>
-      <div class="stat-num">98%</div>
-      <div class="stat-lbl" data-lang-en="Case Success Rate" data-lang-es="Tasa de Éxito en Casos">Case Success Rate</div>
-    </div>
-    <div>
-      <div class="stat-num">40+</div>
-      <div class="stat-lbl" data-lang-en="Nationalities Served" data-lang-es="Nacionalidades Atendidas">Nationalities Served</div>
-    </div>
-    <div>
-      <div class="stat-num">15+</div>
-      <div class="stat-lbl" data-lang-en="Years Combined Experience" data-lang-es="Años de Experiencia Combinada">Years Combined Experience</div>
-    </div>
-    <div>
-      <div class="stat-num">1h</div>
-      <div class="stat-lbl" data-lang-en="Emergency Response Time" data-lang-es="Tiempo de Respuesta de Emergencia">Emergency Response Time</div>
-    </div>
+  <div class="hero-image">
+    <img src="lawyer.png" alt="Immigration attorney" />
   </div>
 </section>
 
