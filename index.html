@@ -411,23 +411,46 @@
     .method-cols {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      border: 1px solid var(--gold-border);
       margin-top: 3rem;
+      position: relative;
+      gap: 0;
+    }
+
+    /* Línea conectora horizontal dorada entre columnas */
+    .method-cols::before {
+      content: '';
+      position: absolute;
+      top: 5.5rem;
+      left: 12%;
+      right: 12%;
+      height: 2px;
+      background: linear-gradient(to right, transparent, var(--gold-border), var(--gold), var(--gold-border), transparent);
+      z-index: 0;
     }
 
     .method-col {
       padding: 2.5rem;
-      border-right: 1px solid var(--gold-border);
+      background: linear-gradient(165deg, #0E1212 0%, #1C2424 100%);
+      border: 1px solid var(--gold-border);
+      position: relative;
+      z-index: 1;
     }
-    .method-col:last-child { border-right: none; }
+
+    .method-icon {
+      margin-bottom: 1rem;
+    }
+    .method-icon svg { width: 32px; height: 32px; }
 
     .method-num {
+      display: inline-block;
       font-family: var(--serif);
-      font-size: 5rem;
-      font-weight: 700;
-      color: rgba(184,154,92,0.12);
-      line-height: 1;
-      margin-bottom: 1.4rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gold);
+      border: 1px solid var(--gold-border);
+      padding: 3px 10px;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
     }
 
     .method-col h3 { font-size: 1.35rem; color: var(--gold); margin-bottom: 0.7rem; }
@@ -711,7 +734,8 @@
         padding: 110px 5% 60px;
       }
       .method-cols{ grid-template-columns: 1fr; }
-      .method-col { border-right: none; border-bottom: 1px solid var(--gold-border); }
+      .method-cols::before { display: none; }
+      .method-col { border-right: none; }
       .method-col:last-child { border-bottom: none; }
       .practice-grid { grid-template-columns: repeat(2, 1fr); }
       .team-grid  { grid-template-columns: repeat(2, 1fr); }
@@ -853,6 +877,7 @@
   </p>
   <div class="method-cols">
     <div class="method-col">
+      <div class="method-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#B89A5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></svg></div>
       <div class="method-num">I</div>
       <h3 data-lang-en="Assess &amp; Diagnose"  data-lang-es="Evaluar y Diagnosticar">Assess &amp; Diagnose</h3>
       <p  data-lang-en="Exhaustive legal risk assessment — immigration history, criminal intersection, deadlines — before recommending any action."
@@ -861,6 +886,7 @@
       </p>
     </div>
     <div class="method-col">
+      <div class="method-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#B89A5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><path d="M10 6.5h4"/><path d="M6.5 10v4"/><path d="M17.5 10v4"/><path d="M10 17.5h4"/></svg></div>
       <div class="method-num">II</div>
       <h3 data-lang-en="Strategize &amp; Build" data-lang-es="Estrategizar y Construir">Strategize &amp; Build</h3>
       <p  data-lang-en="Layered defense architecture with primary, secondary, and contingency paths — built for the worst-case scenario."
@@ -869,6 +895,7 @@
       </p>
     </div>
     <div class="method-col">
+      <div class="method-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#B89A5C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 4v6c0 5.25-3.5 9.74-7 11-3.5-1.26-7-5.75-7-11V6l7-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
       <div class="method-num">III</div>
       <h3 data-lang-en="Execute &amp; Protect"  data-lang-es="Ejecutar y Proteger">Execute &amp; Protect</h3>
       <p  data-lang-en="Full representation at hearings, appeals, and consular proceedings — then securing your status against future vulnerabilities."
