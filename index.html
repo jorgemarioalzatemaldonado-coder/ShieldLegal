@@ -213,10 +213,18 @@
     }
 
     .testi-card {
-      background: var(--bg-1);
+      background: linear-gradient(165deg, #0E1212 0%, #1A1F1F 100%);
       border: 1px solid var(--gold-border);
+      border-left: 3px solid var(--gold);
       padding: 2rem;
       position: relative;
+    }
+
+    .testi-stars {
+      color: var(--gold);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      margin-bottom: 0.75rem;
     }
 
     .testi-quote {
@@ -234,6 +242,22 @@
       color: var(--text);
       line-height: 1.65;
       margin-bottom: 1.25rem;
+    }
+
+    .testi-footer {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .testi-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      border: 1.5px solid var(--gold-border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      background: var(--gold-dim);
+      flex-shrink: 0;
     }
 
     .testi-meta {
@@ -1044,36 +1068,48 @@
   </h2>
   <div class="testi-grid">
     <div class="testi-card">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <div class="testi-quote">"</div>
       <p data-lang-en="After two failed appeals with other firms, ShieldLegal got my removal case reversed in federal court. I didn't think it was possible."
          data-lang-es="Después de dos apelaciones fallidas con otros despachos, ShieldLegal logró revertir mi caso de expulsión en un tribunal federal. No creía que fuera posible.">
         After two failed appeals with other firms, ShieldLegal got my removal case reversed in federal court. I didn't think it was possible.
       </p>
-      <div class="testi-meta">
-        <span class="testi-name" data-lang-en="A.M. — Venezuelan national" data-lang-es="A.M. — Nacional venezolano">A.M. — Venezuelan national</span>
-        <span class="testi-case" data-lang-en="Removal Defense &amp; Federal Appeal" data-lang-es="Defensa contra Expulsión y Apelación Federal">Removal Defense &amp; Federal Appeal</span>
+      <div class="testi-footer">
+        <div class="testi-avatar">&#127483;&#127466;</div>
+        <div class="testi-meta">
+          <span class="testi-name" data-lang-en="A.M. — Venezuelan national" data-lang-es="A.M. — Nacional venezolano">A.M. — Venezuelan national</span>
+          <span class="testi-case" data-lang-en="Removal Defense &amp; Federal Appeal" data-lang-es="Defensa contra Expulsión y Apelación Federal">Removal Defense &amp; Federal Appeal</span>
+        </div>
       </div>
     </div>
     <div class="testi-card">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <div class="testi-quote">"</div>
       <p data-lang-en="I was detained and given 48 hours. ShieldLegal had an attorney at the facility within hours and stopped the deportation flight. I'm still here with my family."
          data-lang-es="Estaba detenido y me dieron 48 horas. ShieldLegal tuvo un abogado en el centro de detención en pocas horas y detuvo el vuelo de deportación. Sigo aquí con mi familia.">
         I was detained and given 48 hours. ShieldLegal had an attorney at the facility within hours and stopped the deportation flight. I'm still here with my family.
       </p>
-      <div class="testi-meta">
-        <span class="testi-name" data-lang-en="R.T. — Colombian national" data-lang-es="R.T. — Nacional colombiano">R.T. — Colombian national</span>
-        <span class="testi-case" data-lang-en="Emergency Detention Defense" data-lang-es="Defensa de Emergencia por Detención">Emergency Detention Defense</span>
+      <div class="testi-footer">
+        <div class="testi-avatar">&#127464;&#127476;</div>
+        <div class="testi-meta">
+          <span class="testi-name" data-lang-en="R.T. — Colombian national" data-lang-es="R.T. — Nacional colombiano">R.T. — Colombian national</span>
+          <span class="testi-case" data-lang-en="Emergency Detention Defense" data-lang-es="Defensa de Emergencia por Detención">Emergency Detention Defense</span>
+        </div>
       </div>
     </div>
     <div class="testi-card">
+      <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
       <div class="testi-quote">"</div>
       <p data-lang-en="Our EB-1A had been denied twice. ShieldLegal rebuilt the entire evidentiary package and we were approved in four months. The expertise is in a different league."
          data-lang-es="Nuestra EB-1A había sido negada dos veces. ShieldLegal reconstruyó todo el paquete probatorio y fuimos aprobados en cuatro meses. La experiencia está en otra categoría.">
         Our EB-1A had been denied twice. ShieldLegal rebuilt the entire evidentiary package and we were approved in four months. The expertise is in a different league.
       </p>
-      <div class="testi-meta">
-        <span class="testi-name" data-lang-en="K.L. — South Korean national" data-lang-es="K.L. — Nacional surcoreana">K.L. — South Korean national</span>
-        <span class="testi-case" data-lang-en="EB-1A Extraordinary Ability" data-lang-es="EB-1A Habilidad Extraordinaria">EB-1A Extraordinary Ability</span>
+      <div class="testi-footer">
+        <div class="testi-avatar">&#127472;&#127479;</div>
+        <div class="testi-meta">
+          <span class="testi-name" data-lang-en="K.L. — South Korean national" data-lang-es="K.L. — Nacional surcoreana">K.L. — South Korean national</span>
+          <span class="testi-case" data-lang-en="EB-1A Extraordinary Ability" data-lang-es="EB-1A Habilidad Extraordinaria">EB-1A Extraordinary Ability</span>
+        </div>
       </div>
     </div>
   </div>
